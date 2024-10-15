@@ -1,9 +1,9 @@
-export type BookProps = {
+export interface BookProps {
   id: string;
   name: string;
   year: number;
   picUrl: string;
-};
+}
 
 const BookCard: React.FC<BookProps> = ({ name, year, picUrl }) => {
   return (
