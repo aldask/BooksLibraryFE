@@ -1,4 +1,4 @@
-type BookProps = {
+export type BookProps = {
   id: string;
   name: string;
   year: number;
