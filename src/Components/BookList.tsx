@@ -8,8 +8,14 @@ const BookList: React.FC = () => {
 
   useEffect(() => {
     fetch("https://localhost:7248/item")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch books from the database");
+        }
+        return res.json();
+      })
+      .then((data) => setBooks(data))
+      .catch((error) => console.error("Error fetching books"));
   }, []);
 
   return (
