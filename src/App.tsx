@@ -1,10 +1,16 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import BookList from "./Components/BookList";
 
 function App() {
   return (
-    <div className="App">
-      <h1>test</h1>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<BookList />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
