@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import BookCard, { BookProps } from "./BookCard";
 import LibrarySearch from "./LibrarySearch";
 
@@ -28,6 +29,16 @@ const BookList: React.FC = () => {
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-br from-blue-50 to-blue-300 opacity-80">
       <div className="relative z-10 p-8 flex-grow">
         <LibrarySearch onSearch={handleUserSearch} />
+
+        <div className="mt-4 mb-6 flex justify-center">
+          <Link
+            to="/reservations"
+            className="bg-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-700 transition duration-200"
+          >
+            View Current Reservations
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 max-w-5xl mx-auto">
           {books
             .filter((book) => {
