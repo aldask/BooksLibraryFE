@@ -1,10 +1,17 @@
-import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import BookList from "./Components/BookList";
+import CurrentReservations from "./Components/CurrentReservations";
 
 function App() {
   return (
-    <div className="App">
-      <h1>test</h1>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<BookList />} />
+          <Route path="/reservations" element={<CurrentReservations />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
