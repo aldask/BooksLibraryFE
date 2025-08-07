@@ -36,7 +36,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
 
     try {
       const response = await fetch(
-        `https://localhost:7248/Reserve/calc/${itemId}`,
+        `https://booksreservationapi.onrender.com/Reserve/calc/${itemId}`,
         {
           method: "POST",
           headers: {
