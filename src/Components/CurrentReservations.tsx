@@ -13,7 +13,7 @@ const CurrentReservations: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://localhost:7248/Reserve/allreservations"
+        "https://booksreservationapi.onrender.com/Reserve/allreservations"
       );
       if (response.ok) {
         const data = await response.json();

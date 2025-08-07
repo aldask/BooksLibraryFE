@@ -9,7 +9,7 @@ const BookList: React.FC = () => {
   const [searchType, setSearchType] = useState<"name" | "year">("name");
 
   useEffect(() => {
-    fetch("https://localhost:7248/item")
+    fetch("https://booksreservationapi.onrender.com/item")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch books from the database");
